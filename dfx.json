@@ -2,7 +2,10 @@
   "canisters": {
     "multilingual_canister_motoko": {
       "main": "src/multilingual_canister_motoko/main.mo",
-      "type": "motoko"
+      "type": "motoko",
+      "dependencies": [
+        "multilingual_canister_rust"
+      ]
     },
     "multilingual_canister_rust": {
       "package": "multilingual_canister_rust",
