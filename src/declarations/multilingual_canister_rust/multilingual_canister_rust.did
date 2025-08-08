@@ -1,0 +1,3 @@
+service : {
+  generate_id : () -> (text);
+}

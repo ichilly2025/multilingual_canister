@@ -1,0 +1,11 @@
+type User = record {
+  id : text;
+  username : text;
+};
+
+service : {
+  greet : (text) -> (text);
+  addUser : (text) -> (text);
+  getUsers : () -> (vec User) query;
+  getUserCount : () -> (nat) query;
+}

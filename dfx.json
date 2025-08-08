@@ -1,0 +1,32 @@
+{
+  "canisters": {
+    "multilingual_canister_motoko": {
+      "main": "src/multilingual_canister_motoko/main.mo",
+      "type": "motoko"
+    },
+    "multilingual_canister_rust": {
+      "package": "multilingual_canister_rust",
+      "type": "rust",
+      "candid": "src/multilingual_canister_rust/multilingual_canister_rust.did"
+    },
+    "multilingual_canister_frontend": {
+      "dependencies": [
+        "multilingual_canister_motoko",
+        "multilingual_canister_rust"
+      ],
+      "source": [
+        "src/multilingual_canister_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "multilingual_canister_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
